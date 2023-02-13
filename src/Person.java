@@ -1,6 +1,6 @@
 public class Person {
-    private static String firstName;
-    private static String lastName;
+    private String firstName;
+    private String lastName;
 
     public Person(String firstName) {
         this.firstName = firstName;
@@ -11,8 +11,8 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public static String getFirstName(Person player) {
-        return firstName;
+    public String getFirstName(Person player) {
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -25,6 +25,13 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        if(lastName == null){
+            return firstName;
+        } else return firstName + " " + lastName;
     }
 }
 
