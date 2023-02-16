@@ -29,7 +29,7 @@ public class Player extends Person{
     }
 
     public void reduceMoney (int amount){
-        this.currentMoney = currentMoney - amount;
+        this.currentMoney = currentMoney + amount;
     }
     public void addMoney (int amount){
         this.currentMoney = currentMoney + amount;
