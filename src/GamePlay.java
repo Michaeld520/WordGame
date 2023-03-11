@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class GamePlay {
 
     public static void main(String[] args) {
-        Host host = new Host("Bob", "Barker");
-        host.randomizeNum();
-        Player[] players = new Player[3];
         Scanner scanner = new Scanner(System.in);
+        Host host = new Host("Bob", "Barker");
+        Player[] players = new Player[3];
         for (int i = 1; i < 4; i++) {
             System.out.println("First name of Player " + i + "?");
             String firstName = scanner.next();
@@ -53,6 +52,7 @@ public class GamePlay {
             System.out.println("Would you like to continue playing? Please enter Y for Yes or N for No");
             String continueGameQuestion = scanner.next().toUpperCase();
             if (continueGameQuestion.equals("Y")) {
+                host.choosePhrase();
                 continueGame = true;
                 correctAnswer = true;
             } else if (continueGameQuestion.equals("N")) {

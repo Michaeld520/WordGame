@@ -6,9 +6,9 @@ public class Physical implements Award{
     @Override
     public int displayWinnings(Player player, boolean guessCorrect) {
         if (guessCorrect){
-            System.out.println(player.parentString() + ", you won a " + prizes[getRandomPrize(prizes)] + "!");
+            System.out.println(player.parentString() + ", that letter was found,  you won a " + prizes[getRandomPrize(prizes)] + "!");
         } else {
-            System.out.println(player.parentString() + ", you lost, you could have won a " + prizes[getRandomPrize(prizes)]);
+            System.out.println(player.parentString() + ", that letter was not found, you could have won a " + prizes[getRandomPrize(prizes)]);
         }
         return 0;
     }

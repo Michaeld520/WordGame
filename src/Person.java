@@ -11,7 +11,7 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getFirstName(Person player) {
+    public String getFirstName() {
         return this.firstName;
     }
 
