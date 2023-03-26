@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class GamePlay {
 
     public static void main(String[] args) {
+
+        new GUI();
         Scanner scanner = new Scanner(System.in);
         Host host = new Host("Bob", "Barker");
         Player[] players = new Player[3];
